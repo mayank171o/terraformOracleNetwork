@@ -14,7 +14,7 @@ This script will create
 
 #Issues needs to be addreseed
 1. I have commented out the bootstarp script as that was taking long.Will explain during the interview.
-2. I was using Sydney zone which has only 1 AD so not able to mkae this higly available.
+2. I am using Sydney zone which has only 1 AD so not able to make this higly available.
 3. Not able to create server for Grafana.
 
 #High Availablity Solution:
