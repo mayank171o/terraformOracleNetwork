@@ -5,3 +5,4 @@ variable "fingerprint" {}
 variable "region" {}
 variable "compartment_ocid" {}
 variable "publickeyCompute" {}
+variable "privatekeyCompute" {}

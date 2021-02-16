@@ -11,7 +11,7 @@ resource "oci_load_balancer_backend" "oracleBackendLB" {
     backendset_name = oci_load_balancer_backend_set.oracleBackendLB_set.name
     ip_address = oci_core_instance.ubuntu_instance_webserver.private_ip
     load_balancer_id = oci_load_balancer_load_balancer.LoadbalancerOracle.id
-    port = "80"
+    port = "8080"
 
 }
 resource "oci_load_balancer_listener" "oracle_lb_listener" {
@@ -19,7 +19,7 @@ resource "oci_load_balancer_listener" "oracle_lb_listener" {
     default_backend_set_name = oci_load_balancer_backend_set.oracleBackendLB_set.name
     load_balancer_id = oci_load_balancer_load_balancer.LoadbalancerOracle.id
     name = "oracle_lb_listener"
-    port = "80"
+    port = "8080"
     protocol = "HTTP"
 }
 

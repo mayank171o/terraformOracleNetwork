@@ -18,4 +18,26 @@ resource "oci_core_instance" "ubuntu_instance_webserver" {
         ssh_authorized_keys = file(var.publickeyCompute)
     } 
     preserve_boot_volume = false
+	
+	connection  {
+    type        = "ssh"
+    host        = "${self.private_ip}"
+    timeout     = "5m"
+    user        = "ubuntu"
+    private_key = file(var.privatekeyCompute)
+
+    bastion_host        = oci_core_instance.ubuntu_instance.public_ip
+    bastion_user        = "ubuntu"
+    bastion_private_key = file(var.privatekeyCompute)
+  }
+ provisioner "file" {
+    source      = "script/setup.sh"
+    destination = "~/setup.sh"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sh ~/setup.sh",
+    ]
+  }
 }

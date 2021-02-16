@@ -39,17 +39,7 @@ ingress_security_rules {
           max = 8080
       }
     }
-ingress_security_rules {
-      stateless = false
-      source = "10.0.2.0/24"
-      source_type = "CIDR_BLOCK"
-      # Get protocol numbers from https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml TCP is 6
-      protocol = "6"
-      tcp_options {
-          min = 80
-          max = 80
-      }
-    }
+
 
   ingress_security_rules { 
       stateless = false
