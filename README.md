@@ -28,4 +28,4 @@ This script will create
 #High Availablity Solution:
 1. Create two public subnets for 2 load balancers in two seperate ADs.
 2. Create two public subnet to host 2 Bastion host in 2 seperate AD so if 1 AD goes doem we have another bastion host.
-3. Weservers or DB instances needs to be launched in multiple private Subnet in different ADs.
+3. Weservers or DB instances needs to be launched in multiple private Subnet in different ADs. 
