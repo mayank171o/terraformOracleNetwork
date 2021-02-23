@@ -1,12 +1,14 @@
 # TerraformOracleNetwork 
 
 # To Run perform these actions 
-terraform init
-terraform plan
-terraform apply
+* terraform init
+* terraform plan
+* terraform apply
 
-# Description:
+## Description:
+
 This script will create
+
 	1. A bastion host in public subnet (I am using normal ubuntu compute instance as bastion host , in real time we can use a hardened bastion machine with more security , also I used the basion host in same compartment under same same subnet , as per the challenge bastion must be on a different compartment with different subnet id starting from 172.x.x.x)).
 	Bastion host will connect on 22 from all machine in internet , for more security we can allow access to this host from a specific network Range.
 	2. Compute instance on private subnet (10.0.3.0/24) which can be accessed by the bastion host over port 22 (subnet range 10.0.1.0/24) , and port 8080 from traffic coming from load balancer subnet (10.0.2.0/24).
