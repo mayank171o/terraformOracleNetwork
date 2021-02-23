@@ -24,7 +24,7 @@ This script will create
 	   Steps:
 	     - Username/Password : admin/admin
 	     - Default datasource is Prometheus I have configured this in datasource.yml file under scripts.
-	     - create new Dashboard
+	     - Create new Dashboard
 	     - Create new Panel , under promethius select metrics as UP , this will display the fibonacci service status (up or down)
 	     - Create new Panel , under promethius select metrics put promhttp_metric_handler_requests_total to get number of hits on the application.
 
