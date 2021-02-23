@@ -1,11 +1,5 @@
-mkdir samp
-
-#install Java
-
-#sudo apt install openjdk-8-jdk -y
-
 #refesh ip tables
-
+sudo chmod 755 ~/*
 sudo iptables-save > ~/iptables-rules
 sudo iptables -P INPUT ACCEPT
 sudo iptables -P OUTPUT ACCEPT
@@ -29,6 +23,6 @@ sudo add-apt-repository \
    stable" -y
 	
 
-  sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-  sudo docker run -d -p 8080:8080 mayank1783/fibonacci-sequence
-
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+sudo apt-get install docker-compose -y
+sudo docker-compose up -d
